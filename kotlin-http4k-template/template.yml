@@ -1,0 +1,3 @@
+language: kotlin-http4k
+welcome_message: |
+  Welcome to your new Kotlin JVM function using http4k. The template gets built with Gradle.
