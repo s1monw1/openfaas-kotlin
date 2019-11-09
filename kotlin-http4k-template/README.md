@@ -8,7 +8,6 @@ Gradle version: 5.5.1
 
 There are three projects which make up a single gradle build:
 
-- `model` - (Library) classes for parsing request/response
 - `function` - (Library) your function code as a developer, you will only ever see this folder
 - `http4k-entrypoint` - (App) HTTP server and routing
 
