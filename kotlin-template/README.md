@@ -14,10 +14,10 @@ There are three projects which make up a single gradle build:
 
 ### Handler
 
-The handler is written in the `./function/src/main/com/openfaas/function` folder
+The handler is written in the `./src/main/com/openfaas/function` folder
 
-Tests are supported via junit within `./function/src/test`
+Tests are supported via junit within `./src/test`
 
 ### External dependencies
 
-External dependencies can be specified in ./function/build.gradle.kts
+External dependencies can be specified in ./build.gradle.kts
