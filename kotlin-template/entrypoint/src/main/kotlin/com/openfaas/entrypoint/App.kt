@@ -14,7 +14,7 @@ internal const val PORT: Int = 3000
 
 fun main() {
     val server = HttpServer.create(InetSocketAddress(PORT), 0)
-    with(server){
+    with(server) {
         createContext("/", InvokeHandler(Handler()))
         executor = null // creates a default executor
         start()

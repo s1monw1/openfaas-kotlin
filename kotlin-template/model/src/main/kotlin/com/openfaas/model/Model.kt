@@ -12,6 +12,7 @@ interface IRequest {
     val queryRaw: String?
     val query: Map<String, String>
     val pathRaw: String?
+    val path: Map<String, String>
     fun getHeader(key: String): String?
 }
 
@@ -23,16 +24,32 @@ interface IResponse {
 }
 
 class Request(
-    override val body: String?,
+    override val body: String? = null,
     override val headers: Map<String, String> = mapOf(),
     override val queryRaw: String? = null,
     override val pathRaw: String? = null
 ) : IRequest {
 
     override val query: Map<String, String> = parseQueryParameters()
+    override val path: Map<String, String> = parsePathParameters()
 
     override fun getHeader(key: String): String? {
         return headers[key]
+    }
+
+    private fun parsePathParameters(): Map<String, String> {
+        val pathToProcess = pathRaw
+            .takeIf { !it.isNullOrBlank() } ?: return emptyMap()
+        return pathToProcess
+            .substringAfter("/")
+            .split("/")
+            .chunked(2) {
+                when (it.size) {
+                    0 -> null
+                    1 -> it[0] to ""
+                    else -> it[0] to it[1]
+                }
+            }.filterNotNull().toMap()
     }
 
     private fun toQueryPair(pair: String): Pair<String, String>? {
