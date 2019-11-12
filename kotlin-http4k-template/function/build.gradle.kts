@@ -1,3 +1,5 @@
+project.group = "com.openfaas.kotlin.template"
+
 plugins {
     kotlin("jvm") version "1.3.50"
 }
@@ -5,14 +7,12 @@ plugins {
 repositories {
     jcenter()
 }
-project.group = "com.openfaas.kotlin.template"
 
-fun junit(module: String) = "org.junit.jupiter:junit-jupiter-$module:5.5.1"
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
     implementation("org.http4k:http4k-core:3.194.0")
 
-    testImplementation(junit("engine"))
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.5.1")
     testImplementation("org.assertj:assertj-core:3.11.1")
 }
 
