@@ -2,3 +2,5 @@
 .gradle
 build
 out
+model
+.DS_Store
