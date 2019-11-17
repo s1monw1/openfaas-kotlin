@@ -1,4 +1,4 @@
-## Template: kotlin-http4k-template
+## Template: kotlin-http4k
 
 The Kotlin template uses gradle as a build system and http4k as a lightweight HTTP toolkit.
 

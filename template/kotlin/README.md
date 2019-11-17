@@ -1,4 +1,4 @@
-## Template: kotlin-template
+## Template: kotlin
 
 The Kotlin template uses gradle as a build system.
 
