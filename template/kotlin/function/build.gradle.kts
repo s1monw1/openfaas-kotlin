@@ -6,10 +6,11 @@ plugins {
 
 repositories {
     jcenter()
+    maven { setUrl("https://jitpack.io") }
 }
 
 dependencies {
-    implementation("com.openfaas.kotlin.template:model")
+    implementation("com.github.s1monw1:openfaas-kotlin-model:1.0.0")
     implementation(kotlin("stdlib-jdk8"))
 
     testImplementation("org.junit.jupiter:junit-jupiter-engine:5.5.1")

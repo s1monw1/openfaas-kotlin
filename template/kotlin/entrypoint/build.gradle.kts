@@ -8,10 +8,11 @@ plugins {
 
 repositories {
     jcenter()
+    maven { setUrl("https://jitpack.io") }
 }
 
 dependencies {
-    implementation("com.openfaas.kotlin.template:model")
+    implementation("com.github.s1monw1:openfaas-kotlin-model:1.0.0")
     implementation("com.openfaas.kotlin.template:function")
     implementation(kotlin("stdlib-jdk8"))
 
