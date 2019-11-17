@@ -1,0 +1,20 @@
+[
+  {
+    "template": "kotlin",
+    "platform": "x86_64",
+    "language": "Kotlin",
+    "source": "s1m0nw1",
+    "description": "Classic Kotlin template",
+    "repo": "https://github.com/s1monw1/openfaas-kotlin",
+    "official": "false"
+  },
+  {
+    "template": "kotlin-http4k",
+    "platform": "x86_64",
+    "language": "Kotlin",
+    "source": "s1m0nw1",
+    "description": "http4k backed Kotlin template",
+    "repo": "https://github.com/s1monw1/openfaas-kotlin",
+    "official": "false"
+  }
+]
