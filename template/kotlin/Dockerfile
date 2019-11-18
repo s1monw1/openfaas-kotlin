@@ -3,7 +3,6 @@ ENV APP_HOME=/app
 WORKDIR $APP_HOME/entrypoint
 # This allows caching of dependencies for repeated builds
 COPY function/build.gradle.kts ./function/settings.gradle.kts $APP_HOME/function/
-COPY model/build.gradle.kts ./model/settings.gradle.kts $APP_HOME/model/
 COPY entrypoint/build.gradle.kts ./entrypoint/settings.gradle.kts ./
 COPY entrypoint/gradle $WORKDIR/gradle
 RUN gradle build
