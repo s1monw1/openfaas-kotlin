@@ -24,4 +24,6 @@ Tests are supported via junit within `./src/test`
 
 ### External dependencies
 
-External dependencies can be specified in `./build.gradle.kts`
+External dependencies can be specified in `./build.gradle.kts`. 
+
+If you want to integrate with another system via HTTP, you can, for instance, consider using the [http4k client libraries](https://www.http4k.org/guide/modules/clients/).
