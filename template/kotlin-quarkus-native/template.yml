@@ -1,0 +1,2 @@
+language: quarkus-native-gradle
+fprocess: function
