@@ -4,7 +4,7 @@ ENV APP_HOME /app
 RUN mkdir -p /home/gradle/cache_home
 ENV GRADLE_USER_HOME /home/gradle/cache_home
 WORKDIR $APP_HOME/function
-COPY function/build.gradle function/settings.gradle function/gradle.properties $APP_HOME/function/
+COPY function/build.gradle.kts function/settings.gradle.kts $APP_HOME/function/
 RUN gradle -version
 
 # Get a build environment
@@ -14,7 +14,7 @@ ENV APP_HOME /app
 ENV JAVA_HOME /opt/graalvm-ce-19.2.1/
 ENV PATH $JAVA_HOME/bin:$PATH
 RUN apt-get update && apt-get install -y gcc zlib1g-dev
-COPY --from=build-aot /opt /opt
+COPY --from=build-aot /opt/graalvm-ce-19.2.1 /opt/graalvm-ce-19.2.1
 RUN gu install native-image
 COPY --from=cache /home/gradle/cache_home /home/gradle/.gradle
 COPY ./function $APP_HOME/function/

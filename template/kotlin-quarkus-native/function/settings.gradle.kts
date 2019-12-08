@@ -6,11 +6,11 @@ pluginManagement {
     }
     resolutionStrategy {
         eachPlugin {
-            if (requested.id.id == 'io.quarkus') {
+            if (requested.id.id == "io.quarkus") {
                 useModule("io.quarkus:quarkus-gradle-plugin:1.0.1.Final")
             }
         }
     }
 }
 
-rootProject.name='code-with-quarkus'
+rootProject.name = "function"
