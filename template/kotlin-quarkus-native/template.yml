@@ -1,2 +1,3 @@
 language: quarkus-native-gradle
-fprocess: function
+welcome_message: |
+  Welcome to your new Kotlin Quarkus native function. The template gets built with Gradle.

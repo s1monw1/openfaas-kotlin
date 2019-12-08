@@ -1,6 +1,6 @@
 # OpenFaaS Kotlin templates
 
-This repository contains two Kotlin templates for OpenFaaS.
+This repository contains multiple Kotlin templates for OpenFaaS.
 ```
 $ faas-cli template pull https://github.com/s1monw1/openfaas-kotlin
 $ faas new --list
@@ -8,6 +8,7 @@ $ faas new --list
 Languages available as templates:
 - kotlin
 - kotlin-http4k
+- kotlin-quarkus-native
 ```
 
 
@@ -124,3 +125,14 @@ class OpenFaasHandler : HttpHandler {
 ```
 
 The `body` will be written to the client along with a HTTP 500 status code.
+
+## kotlin-quarkus-native template 
+
+This template is backed by [Quarkus](https://quarkus.io/), a framework to build cloud-native JVM-based applications powered by GraalVM.
+
+### Trying the template
+
+```
+$ faas-cli template pull https://github.com/s1monw1/openfaas-kotlin
+$ faas new --lang kotlin-quarkus-native <fn-name>
+```
