@@ -1,7 +1,7 @@
 project.group = "com.openfaas.kotlin.template"
 
 plugins {
-    kotlin("jvm") version "1.3.50"
+    kotlin("jvm") version "1.3.61"
     id("com.github.johnrengelman.shadow") version "5.1.0"
     application
 }

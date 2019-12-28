@@ -1,6 +1,6 @@
 package com.openfaas.entrypoint
 
-import com.openfaas.function.OpenFaasHandler
+import com.openfaas.function.Handler
 import org.http4k.core.Method.DELETE
 import org.http4k.core.Method.GET
 import org.http4k.core.Method.PATCH
@@ -12,7 +12,7 @@ import org.http4k.server.SunHttp
 import org.http4k.server.asServer
 
 fun main() {
-    val handler = OpenFaasHandler()
+    val handler = Handler()
     routes(
         "/" bind routes(
             GET to handler,

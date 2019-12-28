@@ -92,7 +92,7 @@ package com.openfaas.function
 import org.http4k.core.*
 import org.http4k.core.Status.Companion.OK
 
-class OpenFaasHandler : HttpHandler {
+class Handler : HttpHandler {
     override fun invoke(request: Request): Response {
         return Response(OK).body("Hello OpenFaas World")
     }
@@ -104,7 +104,7 @@ Example writing a custom status code
 import org.http4k.core.*
 import org.http4k.core.Status.Companion.ACCEPTED
 
-class OpenFaasHandler : HttpHandler {
+class Handler : HttpHandler {
     override fun invoke(request: Request): Response {
         return Response(ACCEPTED).body("Hello OpenFaas World")
     }
@@ -117,7 +117,7 @@ Example writing an error / failure.
 import org.http4k.core.*
 import org.http4k.core.Status.Companion.INTERNAL_SERVER_ERROR
 
-class OpenFaasHandler : HttpHandler {
+class Handler : HttpHandler {
     override fun invoke(request: Request): Response {
         return Response(INTERNAL_SERVER_ERROR).body("Error saying hello")
     }
